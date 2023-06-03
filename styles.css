@@ -1,0 +1,29 @@
+#chart {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+
+  .main{
+    text-align: center;
+  }
+  
+  .bar {
+    fill: rgb(123, 70, 180);
+  }
+  #tooltip {
+    position: absolute;
+    background-color: #f9f9f9;
+    padding: 10px;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  #title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
