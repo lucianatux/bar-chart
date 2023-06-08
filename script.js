@@ -51,18 +51,15 @@ d3.json(url).then(data => {
      .attr('y', d => yScale(d[1]))
      .attr('width', width / data.data.length)
      .attr('height', d => height - yScale(d[1]))
-     .on('mouseover', (d, i) => {
- 
+     .on('mouseover', (d) => {
       tooltip.style('opacity', 1);
       tooltip.attr('data-date', d[0])
              .html(`Date: ${d[0]}<br>GDP: $${d[1]} billion`)
-             .style('left', `${d3.pointer(event)[0]}px`)
+             //.style('left', `${d3.event.pageX}px`)
+             //.style('top', `${d3.event.pageY}px`);
+            .style('left', `${d3.pointer(event)[0]}px`)
              .style('top', `${d3.pointer(event)[1]}px`);
-      
-
-      console.log('Datos:', d);
-    })
-    
+   })
      .on('mouseout', () => {
 
        tooltip.style('opacity', 0);
